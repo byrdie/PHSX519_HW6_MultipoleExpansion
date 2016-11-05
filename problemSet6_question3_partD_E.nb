@@ -1,0 +1,371 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10752,        362]
+NotebookOptionsPosition[      9428,        308]
+NotebookOutlinePosition[      9767,        323]
+CellTagsIndexPosition[      9724,        320]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Question 3", "Section",
+ CellChangeTimes->{{3.666057964272142*^9, 3.666057968239962*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Part d.", "Subsection",
+ CellChangeTimes->{{3.6660579728708057`*^9, 3.666057974395125*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Compute the volume integral of the polarization", "Subsubsection",
+ CellChangeTimes->{{3.666058045701284*^9, 3.666058052102789*^9}, {
+  3.6660580910917892`*^9, 3.666058113679926*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"PR4", "[", 
+     RowBox[{"r", ",", "\[Theta]"}], "]"}], " ", 
+    SuperscriptBox["r", "2"], 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Phi]", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.666058115975501*^9, 3.6660582027447147`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.666058204800108*^9, 3.6660714538003187`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Part e.", "Subsection",
+ CellChangeTimes->{{3.666058224892071*^9, 3.666058227961582*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Compute the potential energy using the volume integral", "Subsubsection",
+ CellChangeTimes->{{3.666058297225893*^9, 3.666058316773265*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["W", "3"], "=", 
+  RowBox[{"-", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"PR4", "[", 
+        RowBox[{"r", ",", "\[Theta]"}], "]"}], ".", 
+       RowBox[{
+        SubscriptBox["ER", "0"], "[", 
+        RowBox[{"r", ",", "\[Theta]", ",", "\[Phi]"}], "]"}]}], 
+      SuperscriptBox["r", "2"], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "0", ",", "a"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "0", ",", "\[Pi]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", "0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6660582447783537`*^9, 3.666058289180983*^9}, {
+  3.666058354944626*^9, 3.66605839567664*^9}, {3.666070441348597*^9, 
+  3.666070471196086*^9}, {3.666070764615323*^9, 3.666070785560627*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"8", " ", 
+    SuperscriptBox["a", "5"], " ", 
+    SuperscriptBox["K", "2"], " ", "\[Pi]", " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Epsilon]", "-", 
+      SubscriptBox["\[Epsilon]", "0"]}], ")"}], " ", 
+    SubscriptBox["\[Epsilon]", "0"]}], 
+   RowBox[{
+    RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+    RowBox[{"3", " ", 
+     SubscriptBox["\[Epsilon]", "0"]}]}]]}]], "Output",
+ CellChangeTimes->{
+  3.666058398297064*^9, {3.6660704517956333`*^9, 3.666070472634663*^9}, {
+   3.666070772967565*^9, 3.6660707864491673`*^9}, 3.666071454379117*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Compute the potential energy again using Jackson, Equation 4.24 to compare. \
+Start by calculating the derivatives of the electric field and evaluating \
+them at the origin.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6660689971013517`*^9, 3.666069024829047*^9}, {
+  3.66606957357937*^9, 3.6660695972480183`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dEdx", "=", 
+  RowBox[{"Grad", "[", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["EX4", "I"], "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.666069608174437*^9, 3.666069646646802*^9}, {
+  3.666069683378456*^9, 3.666069684905951*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"5", " ", "K", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}], 
+       RowBox[{
+        RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+        RowBox[{"3", " ", 
+         SubscriptBox["\[Epsilon]", "0"]}]}]]}], ",", "0", ",", "0"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"5", " ", "K", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}], 
+       RowBox[{
+        RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+        RowBox[{"3", " ", 
+         SubscriptBox["\[Epsilon]", "0"]}]}]]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     FractionBox[
+      RowBox[{"10", " ", "K", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}], 
+      RowBox[{
+       RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+       RowBox[{"3", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}]}]]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.666069650682966*^9, 3.666069685687345*^9, 
+  3.666071454461658*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Now employ Equation 4.24 to find the work.", "Subsubsection",
+ CellChangeTimes->{{3.666069731742984*^9, 3.6660697590530777`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"v", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Q", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ".", 
+    RowBox[{"Grad", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["E", "0"], "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.66606976343828*^9, 3.666069779132646*^9}, {
+  3.666069886034101*^9, 3.666069915744619*^9}, {3.6660702440882463`*^9, 
+  3.6660702706532507`*^9}, {3.666070684888543*^9, 3.6660706913988667`*^9}, {
+  3.666070722741948*^9, 3.6660707410787497`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"8", " ", 
+       SuperscriptBox["a", "5"], " ", 
+       SuperscriptBox["K", "2"], " ", "\[Pi]", " ", 
+       RowBox[{"(", 
+        RowBox[{"\[Epsilon]", "-", 
+         SubscriptBox["\[Epsilon]", "0"]}], ")"}], " ", 
+       SubscriptBox["\[Epsilon]", "0"]}], 
+      RowBox[{
+       RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+       RowBox[{"3", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}]}]], ",", "0", ",", "0"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     FractionBox[
+      RowBox[{"8", " ", 
+       SuperscriptBox["a", "5"], " ", 
+       SuperscriptBox["K", "2"], " ", "\[Pi]", " ", 
+       RowBox[{"(", 
+        RowBox[{"\[Epsilon]", "-", 
+         SubscriptBox["\[Epsilon]", "0"]}], ")"}], " ", 
+       SubscriptBox["\[Epsilon]", "0"]}], 
+      RowBox[{
+       RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+       RowBox[{"3", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}]}]], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     FractionBox[
+      RowBox[{"32", " ", 
+       SuperscriptBox["a", "5"], " ", 
+       SuperscriptBox["K", "2"], " ", "\[Pi]", " ", 
+       RowBox[{"(", 
+        RowBox[{"\[Epsilon]", "-", 
+         SubscriptBox["\[Epsilon]", "0"]}], ")"}], " ", 
+       SubscriptBox["\[Epsilon]", "0"]}], 
+      RowBox[{
+       RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+       RowBox[{"3", " ", 
+        SubscriptBox["\[Epsilon]", "0"]}]}]]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.666069892170916*^9, 3.666069916292181*^9}, 
+   3.666070248920226*^9, 3.6660703460106287`*^9, 3.6660706936196537`*^9, {
+   3.666070733533285*^9, 3.666070741367729*^9}, 3.666071454580967*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["W", "4.24"], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "6"]}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"v", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "1"}], "]"}], "]"}], "+", 
+      RowBox[{"v", "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "2"}], "]"}], "]"}], "+", 
+      RowBox[{"v", "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ",", "3"}], "]"}], "]"}]}], ")"}]}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.666070255616014*^9, 3.666070326911543*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"8", " ", 
+   SuperscriptBox["a", "5"], " ", 
+   SuperscriptBox["K", "2"], " ", "\[Pi]", " ", 
+   SubscriptBox["\[Epsilon]", "0"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "\[Epsilon]"}], "+", 
+     SubscriptBox["\[Epsilon]", "0"]}], ")"}]}], 
+  RowBox[{
+   RowBox[{"2", " ", "\[Epsilon]"}], "+", 
+   RowBox[{"3", " ", 
+    SubscriptBox["\[Epsilon]", "0"]}]}]]], "Output",
+ CellChangeTimes->{{3.666070318853491*^9, 3.6660703482515373`*^9}, 
+   3.66607075869998*^9, 3.666071454676716*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.666068958525859*^9, 3.666068964279439*^9}, {
+  3.666069037259099*^9, 3.66606903852185*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{959, 1028},
+WindowMargins->{{951, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Linux x86 (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 95, 1, 65, "Section"],
+Cell[CellGroupData[{
+Cell[700, 27, 97, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[822, 32, 189, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1036, 38, 550, 15, 37, "Input"],
+Cell[1589, 55, 149, 3, 32, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1799, 65, 95, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1919, 70, 145, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2089, 75, 920, 24, 37, "Input"],
+Cell[3012, 101, 598, 16, 55, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3659, 123, 324, 6, 59, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4008, 133, 376, 10, 32, "Input"],
+Cell[4387, 145, 1088, 34, 52, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5524, 185, 135, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[5684, 190, 655, 17, 32, "Input"],
+Cell[6342, 209, 1743, 48, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8122, 262, 570, 19, 56, "Input"],
+Cell[8695, 283, 538, 15, 55, "Output"]
+}, Open  ]],
+Cell[9248, 301, 140, 2, 32, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
